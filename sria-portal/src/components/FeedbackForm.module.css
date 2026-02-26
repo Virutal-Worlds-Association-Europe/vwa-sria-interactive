@@ -1,0 +1,20 @@
+.feedbackContainer {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+.feedbackContainer h2 {
+  margin-bottom: 1rem;
+  color: var(--ifm-heading-color);
+}
+
+.feedbackContainer p {
+  margin-bottom: 1.5rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.tallyFrame {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}

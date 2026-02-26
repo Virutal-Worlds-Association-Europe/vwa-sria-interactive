@@ -1,0 +1,311 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+/* Hero Banner */
+.heroBanner {
+  padding: 8rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background-image: url('https://cdn.prod.website-files.com/68a6efdfc70239b9187f49a3/69710817a83e3ae0226ab621_VWA%20banner.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.heroBanner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 35, 102, 0.9) 0%, rgba(0, 71, 171, 0.85) 100%);
+  pointer-events: none;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 4rem 2rem;
+  }
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.heroTitle {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 996px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+}
+
+.heroSubtitle {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #ffffff;
+  margin: 0 auto 2.5rem;
+}
+
+@media screen and (max-width: 996px) {
+  .heroSubtitle {
+    font-size: 1.2rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.exploreButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #ffffff;
+  color: #0047AB;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.exploreButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  color: #0047AB;
+}
+
+.buttonIcon {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.exploreButton:hover .buttonIcon {
+  transform: translateX(4px);
+}
+
+/* Strategic Agenda Section */
+.strategicSection {
+  padding: 5rem 0;
+  background-color: #f8f9fa;
+}
+
+@media screen and (max-width: 996px) {
+  .strategicSection {
+    padding: 3rem 0;
+  }
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+@media screen and (max-width: 996px) {
+  .sectionTitle {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.strategyGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+@media screen and (max-width: 996px) {
+  .strategyGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.strategyCard {
+  display: block;
+  background: linear-gradient(135deg, #0047AB 0%, #0056d6 100%);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 71, 171, 0.2);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: #ffffff;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.strategyCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.strategyCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 28px rgba(0, 71, 171, 0.35);
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.strategyCard:hover::before {
+  opacity: 1;
+}
+
+.strategyIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background-color: #ffffff;
+  color: #0047AB;
+  border-radius: 12px;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.strategyTitle {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.strategyDescription {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.7;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Vision Section */
+.visionSection {
+  padding: 5rem 0;
+  background-color: #ffffff;
+}
+
+@media screen and (max-width: 996px) {
+  .visionSection {
+    padding: 3rem 0;
+  }
+}
+
+.visionGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+@media screen and (max-width: 996px) {
+  .visionGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.visionCard {
+  display: block;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid #e5e7eb;
+}
+
+.visionCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  border-color: #0047AB;
+}
+
+.visionIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  color: #0047AB;
+  font-size: 1.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.visionTitle {
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.visionDescription {
+  color: #6b7280;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Dark mode adjustments */
+[data-theme='dark'] .heroBanner::before {
+  background: linear-gradient(135deg, rgba(0, 35, 102, 0.95) 0%, rgba(0, 71, 171, 0.9) 100%);
+}
+
+[data-theme='dark'] .strategicSection {
+  background-color: #1a1a1a;
+}
+
+[data-theme='dark'] .sectionTitle {
+  color: #ffffff;
+}
+
+[data-theme='dark'] .visionSection {
+  background-color: #0f0f0f;
+}
+
+[data-theme='dark'] .visionCard {
+  background: #1a1a1a;
+  border-color: #333333;
+}
+
+[data-theme='dark'] .visionCard:hover {
+  border-color: #0047AB;
+}
+
+[data-theme='dark'] .visionTitle {
+  color: #ffffff;
+}
+
+[data-theme='dark'] .visionDescription {
+  color: #b6b6b6;
+}
