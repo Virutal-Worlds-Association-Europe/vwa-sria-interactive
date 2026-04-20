@@ -73,7 +73,6 @@ sria-portal/
 │   ├── pages/                     # Custom pages
 │   │   ├── index.tsx              # Homepage
 │   │   ├── index.module.css
-│   │   └── privacy.md             # Privacy policy
 │   └── css/
 │       └── custom.css             # Global styles
 ├── static/                        # Static assets (images, etc.)
@@ -245,7 +244,7 @@ Please refer to the official Virtual Worlds Association documentation for licens
 
 For issues or questions:
 - Check the [Docusaurus documentation](https://docusaurus.io/)
-- Review the privacy policy at `/privacy`
+- Review the [Privacy Policy](https://docs.google.com/document/d/e/2PACX-1vQeQq7FhZwTwIkaVib4txK0UeY7n2hO2hhKUCuknYEOZMavNY5kTvJP_opD3eKfvA/pub)
 - Submit feedback through the integrated feedback form
 
 

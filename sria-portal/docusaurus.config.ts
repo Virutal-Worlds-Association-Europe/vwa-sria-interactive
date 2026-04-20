@@ -160,7 +160,7 @@ const config: Config = {
             },
             {
               label: 'Privacy Policy',
-              to: '/privacy',
+              href: 'https://docs.google.com/document/d/e/2PACX-1vQeQq7FhZwTwIkaVib4txK0UeY7n2hO2hhKUCuknYEOZMavNY5kTvJP_opD3eKfvA/pub',
             },
           ],
         },
