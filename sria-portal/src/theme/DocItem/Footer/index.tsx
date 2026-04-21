@@ -4,6 +4,7 @@ import type FooterType from '@theme/DocItem/Footer';
 import type {WrapperProps} from '@docusaurus/types';
 import {useDoc} from '@docusaurus/plugin-content-docs/client';
 import FeedbackForm from '@site/src/components/FeedbackForm';
+import FeedbackFab from '@site/src/components/FeedbackFab';
 
 type Props = WrapperProps<typeof FooterType>;
 
@@ -42,6 +43,7 @@ export default function FooterWrapper(props: Props): React.ReactElement {
     <>
       <Footer {...props} />
       <FeedbackForm section={section} sectionTitle={sectionTitle} />
+      <FeedbackFab />
     </>
   );
 }

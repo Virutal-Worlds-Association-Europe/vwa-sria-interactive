@@ -673,3 +673,9 @@ a:hover {
     max-width: 260px;
   }
 }
+
+/* Position "Back to Top" button above the Feedback FAB */
+.theme-back-to-top-button {
+  bottom: 80px !important;
+  right: 24px !important;
+}

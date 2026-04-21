@@ -64,7 +64,7 @@ export default function FeedbackForm({
   };
 
   return (
-    <div className={styles.feedbackContainer}>
+    <div id="feedback" className={styles.feedbackContainer}>
       <h2>Provide Feedback</h2>
       <p>
         Share your thoughts on <strong>{sectionTitle}</strong>. Your feedback helps shape
