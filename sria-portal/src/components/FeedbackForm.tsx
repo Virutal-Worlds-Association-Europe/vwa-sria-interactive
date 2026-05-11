@@ -47,7 +47,7 @@ export default function FeedbackForm({
 
   // Build Tally URL with hidden field parameters
   const buildTallyUrl = () => {
-    const baseUrl = 'https://tally.so/embed/dW0REd';
+    const baseUrl = 'https://tally.so/embed/eqK0r0';
     const params = new URLSearchParams({
       alignLeft: '1',
       hideTitle: '1',
