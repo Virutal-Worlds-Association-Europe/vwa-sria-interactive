@@ -11,8 +11,8 @@ const config: Config = {
     v4: true,
   },
 
-  url: 'https://virutal-worlds-association-europe.github.io',
-  baseUrl: '/vwa-sria-interactive/',
+  url: 'https://sria.virtualworldsassociation.eu',
+  baseUrl: '/',
 
   organizationName: 'Virutal-Worlds-Association-Europe',
   projectName: 'vwa-sria-interactive',
