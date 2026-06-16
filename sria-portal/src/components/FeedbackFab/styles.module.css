@@ -9,12 +9,12 @@
   padding: 12px 20px;
   border: none;
   border-radius: 50px;
-  background: #bab9b7;
+  background: #d5d4d2;
   color: #000000;
   font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
   opacity: 1;
   transform: translateY(0);
@@ -22,8 +22,8 @@
 }
 
 .fab:hover {
-  background: #a9a8a5;
-  box-shadow: 0 6px 20px rgba(186, 185, 183, 0.6), 0 0 0 1px rgba(186, 185, 183, 0.3);
+  background: #c4c3c1;
+  box-shadow: 0 6px 20px rgba(213, 212, 210, 0.6), 0 0 0 1px rgba(213, 212, 210, 0.3);
   transform: translateY(-2px);
   animation: none;
 }

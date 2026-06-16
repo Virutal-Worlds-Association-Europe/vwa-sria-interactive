@@ -10,16 +10,16 @@
   align-items: center;
   gap: 1rem;
   padding: 1rem 1.5rem;
-  background: #bab9b7;
-  border: 1px solid #bab9b7;
+  background: #d5d4d2;
+  border: 1px solid #d5d4d2;
   border-radius: 0.75rem;
   transition: all 0.3s ease;
 }
 
 .categoryCard:hover {
-  background: #a9a8a5;
-  border-color: #a9a8a5;
-  box-shadow: 0 4px 20px rgba(186, 185, 183, 0.6), 0 0 0 1px rgba(186, 185, 183, 0.3);
+  background: #c4c3c1;
+  border-color: #c4c3c1;
+  box-shadow: 0 4px 20px rgba(213, 212, 210, 0.6), 0 0 0 1px rgba(213, 212, 210, 0.3);
   transform: translateY(-2px);
 }
 
