@@ -1,6 +1,9 @@
 /**
  * VWA Brand Custom Styling
  * Colors and fonts based on Virtual Worlds Association branding
+ * Primary: #f8f7f3 (warm off-white background)
+ * Accent: #0C59C1 (VWA brand blue)
+ * Secondary: Black (text, contrasts)
  */
 
 /* Import Inter font from Google Fonts */
@@ -14,19 +17,19 @@
 
 /* VWA Brand Colors */
 :root {
-  /* Primary Colors - Blue Theme */
-  --ifm-color-primary: #1E40AF;
-  --ifm-color-primary-dark: #1a359a;
-  --ifm-color-primary-darker: #172e8a;
-  --ifm-color-primary-darkest: #0f1f5c;
-  --ifm-color-primary-light: #2563eb;
-  --ifm-color-primary-lighter: #3b82f6;
-  --ifm-color-primary-lightest: #60a5fa;
+  /* Primary Colors - VWA Brand Blue */
+  --ifm-color-primary: #0C59C1;
+  --ifm-color-primary-dark: #0a4fa9;
+  --ifm-color-primary-darker: #094a9f;
+  --ifm-color-primary-darkest: #073d83;
+  --ifm-color-primary-light: #0e63d9;
+  --ifm-color-primary-lighter: #1069e3;
+  --ifm-color-primary-lightest: #2f7fee;
 
   /* Background Colors */
-  --ifm-background-color: #ffffff;
-  --ifm-navbar-background-color: #ffffff;
-  --ifm-footer-background-color: #1e3a8a;
+  --ifm-background-color: #f8f7f3;
+  --ifm-navbar-background-color: #f8f7f3;
+  --ifm-footer-background-color: #f8f7f3;
 
   /* Text Colors */
   --ifm-font-color-base: #1f2937;
@@ -60,24 +63,24 @@
 
 /* Dark mode colors */
 [data-theme='dark'] {
-  --ifm-color-primary: #60a5fa;
-  --ifm-color-primary-dark: #3b82f6;
-  --ifm-color-primary-darker: #2563eb;
-  --ifm-color-primary-darkest: #1d4ed8;
-  --ifm-color-primary-light: #93c5fd;
-  --ifm-color-primary-lighter: #bfdbfe;
-  --ifm-color-primary-lightest: #dbeafe;
+  --ifm-color-primary: #4da3ff;
+  --ifm-color-primary-dark: #2b91ff;
+  --ifm-color-primary-darker: #1a88ff;
+  --ifm-color-primary-darkest: #006be6;
+  --ifm-color-primary-light: #6fb5ff;
+  --ifm-color-primary-lighter: #80bfff;
+  --ifm-color-primary-lightest: #b3d9ff;
 
   --ifm-background-color: #111827;
   --ifm-navbar-background-color: #1f2937;
-  --ifm-footer-background-color: #1e3a8a;
+  --ifm-footer-background-color: #1f2937;
 
   --ifm-font-color-base: #f3f4f6;
   --ifm-heading-color: #f3f4f6;
   --ifm-color-content: #d1d5db;
   --ifm-color-content-secondary: #9ca3af;
 
-  --docusaurus-highlighted-code-line-bg: rgba(96, 165, 250, 0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(77, 163, 255, 0.1);
 }
 
 /* Navbar Styling */
@@ -101,7 +104,7 @@
 }
 
 .navbar__link:hover {
-  color: #1E40AF !important;
+  color: #0C59C1 !important;
 }
 
 .navbar__logo {
@@ -121,19 +124,20 @@
 }
 
 [data-theme='dark'] .navbar__link:hover {
-  color: #60a5fa !important;
+  color: #4da3ff !important;
 }
 
 
 /* Footer Styling */
 .footer {
   background-color: var(--ifm-footer-background-color);
-  color: #ffffff;
+  color: #1f2937;
   padding: 3rem 0 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .footer__title {
-  color: #ffffff;
+  color: #1f2937;
   font-weight: 500;
   font-size: 0.875rem;
   text-transform: uppercase;
@@ -141,12 +145,12 @@
 }
 
 .footer__link-item {
-  color: #b6b6b6;
+  color: #4b5563;
   font-size: 0.875rem;
 }
 
 .footer__link-item:hover {
-  color: #ffffff;
+  color: #0C59C1;
   text-decoration: none;
 }
 
@@ -154,6 +158,27 @@
   color: #6b6b6b;
   font-size: 0.75rem;
   font-weight: 500;
+}
+
+[data-theme='dark'] .footer {
+  border-top-color: rgba(255, 255, 255, 0.1);
+  color: #f3f4f6;
+}
+
+[data-theme='dark'] .footer__title {
+  color: #f3f4f6;
+}
+
+[data-theme='dark'] .footer__link-item {
+  color: #9ca3af;
+}
+
+[data-theme='dark'] .footer__link-item:hover {
+  color: #4da3ff;
+}
+
+[data-theme='dark'] .footer__copyright {
+  color: #6b7280;
 }
 
 /* Button Styling */
@@ -164,23 +189,23 @@
 }
 
 .button--primary {
-  background-color: #1E40AF;
-  border-color: #1E40AF;
+  background-color: #0C59C1;
+  border-color: #0C59C1;
 }
 
 .button--primary:hover {
-  background-color: #1a359a;
-  border-color: #1a359a;
+  background-color: #0a4fa9;
+  border-color: #0a4fa9;
 }
 
 .button--secondary {
   background-color: transparent;
-  border: 2px solid #1E40AF;
-  color: #1E40AF;
+  border: 2px solid #0C59C1;
+  color: #0C59C1;
 }
 
 .button--secondary:hover {
-  background-color: #1E40AF;
+  background-color: #0C59C1;
   color: #ffffff;
 }
 
@@ -330,10 +355,10 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.02em;
 }
 
-/* Page title (h1) should be blue */
+/* Page title (h1) should be brand blue */
 article h1:first-of-type,
 .markdown h1:first-of-type {
-  color: #1E40AF;
+  color: #0C59C1;
 }
 
 h2 {
@@ -342,7 +367,7 @@ h2 {
 
 [data-theme='dark'] article h1:first-of-type,
 [data-theme='dark'] .markdown h1:first-of-type {
-  color: #60a5fa;
+  color: #4da3ff;
 }
 
 [data-theme='dark'] h2 {
@@ -463,9 +488,9 @@ a:hover {
   align-items: center;
   gap: 1rem;
   padding: 1rem 1.5rem;
-  border: 2px solid #1e40af;
+  border: 2px solid #0C59C1;
   border-radius: 3rem;
-  background: white;
+  background: #f8f7f3;
   transition: all 0.3s ease;
   text-decoration: none;
   flex: 0 1 auto;
@@ -473,9 +498,9 @@ a:hover {
 }
 
 .pagination-nav__link:hover {
-  background: #1e40af;
+  background: #0C59C1;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(30, 64, 175, 0.3);
+  box-shadow: 0 4px 12px rgba(12, 89, 193, 0.3);
   text-decoration: none;
 }
 
@@ -494,7 +519,7 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #1e40af;
+  background: #0C59C1;
   border-radius: 50%;
   color: white;
   font-size: 1.125rem;
@@ -503,7 +528,7 @@ a:hover {
 
 .pagination-nav__link:hover .pagination-nav__icon {
   background: white;
-  color: #1e40af;
+  color: #0C59C1;
 }
 
 .pagination-nav__content {
@@ -527,7 +552,7 @@ a:hover {
 .pagination-nav__label {
   font-size: 1rem;
   font-weight: 600;
-  color: #1e40af;
+  color: #0C59C1;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -539,26 +564,26 @@ a:hover {
 
 /* Dark mode pagination */
 [data-theme='dark'] .pagination-nav__link {
-  border-color: #60a5fa;
+  border-color: #4da3ff;
   background: #1f2937;
 }
 
 [data-theme='dark'] .pagination-nav__link:hover {
-  background: #60a5fa;
-  border-color: #60a5fa;
+  background: #4da3ff;
+  border-color: #4da3ff;
 }
 
 [data-theme='dark'] .pagination-nav__icon {
-  background: #60a5fa;
+  background: #4da3ff;
 }
 
 [data-theme='dark'] .pagination-nav__link:hover .pagination-nav__icon {
   background: #1f2937;
-  color: #60a5fa;
+  color: #4da3ff;
 }
 
 [data-theme='dark'] .pagination-nav__label {
-  color: #60a5fa;
+  color: #4da3ff;
 }
 
 [data-theme='dark'] .pagination-nav__link:hover .pagination-nav__label {
@@ -625,9 +650,9 @@ a:hover {
   flex: 0 0 300px;
   max-width: 300px;
   padding: 1.5rem 1rem;
-  background-color: #ffffff;
+  background-color: #f8f7f3;
   min-height: 100vh;
-  border-right: 1px solid #f3f4f6;
+  border-right: 1px solid #eeede9;
 }
 
 [data-theme='dark'] .col.col--3 {
