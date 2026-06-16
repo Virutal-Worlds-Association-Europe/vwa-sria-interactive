@@ -9,12 +9,12 @@
   padding: 12px 20px;
   border: none;
   border-radius: 50px;
-  background: linear-gradient(135deg, #0C59C1 0%, #0a4fa9 100%);
+  background: #bab9b7;
   color: #fff;
   font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
-  box-shadow: 0 4px 16px rgba(12, 89, 193, 0.35), 0 2px 6px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 16px rgba(186, 185, 183, 0.4), 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   opacity: 1;
   transform: translateY(0);
@@ -22,8 +22,8 @@
 }
 
 .fab:hover {
-  background: linear-gradient(135deg, #0a4fa9 0%, #073d83 100%);
-  box-shadow: 0 6px 24px rgba(12, 89, 193, 0.45), 0 3px 8px rgba(0, 0, 0, 0.2);
+  background: #a9a8a5;
+  box-shadow: 0 6px 24px rgba(186, 185, 183, 0.5), 0 3px 8px rgba(0, 0, 0, 0.15);
   transform: translateY(-2px);
   animation: none;
 }
@@ -48,10 +48,10 @@
 
 @keyframes fabPulse {
   0%, 100% {
-    box-shadow: 0 4px 16px rgba(12, 89, 193, 0.35), 0 2px 6px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25), 0 2px 6px rgba(0, 0, 0, 0.15);
   }
   50% {
-    box-shadow: 0 4px 24px rgba(12, 89, 193, 0.55), 0 2px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4), 0 2px 8px rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -69,11 +69,12 @@
 
 /* Dark mode support */
 [data-theme='dark'] .fab {
-  background: linear-gradient(135deg, #2b91ff 0%, #0C59C1 100%);
-  box-shadow: 0 4px 16px rgba(77, 163, 255, 0.35), 0 2px 6px rgba(0, 0, 0, 0.3);
+  background: #ffffff;
+  color: #000000;
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 [data-theme='dark'] .fab:hover {
-  background: linear-gradient(135deg, #4da3ff 0%, #2b91ff 100%);
-  box-shadow: 0 6px 24px rgba(77, 163, 255, 0.5), 0 3px 8px rgba(0, 0, 0, 0.35);
+  background: #e6e6e6;
+  box-shadow: 0 6px 24px rgba(255, 255, 255, 0.25), 0 3px 8px rgba(0, 0, 0, 0.35);
 }

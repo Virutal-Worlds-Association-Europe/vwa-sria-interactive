@@ -22,7 +22,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(7, 61, 131, 0.9) 0%, rgba(12, 89, 193, 0.85) 100%);
+  background: linear-gradient(135deg, rgba(130, 128, 126, 0.9) 0%, rgba(186, 185, 183, 0.85) 100%);
   pointer-events: none;
 }
 
@@ -78,7 +78,7 @@
   align-items: center;
   gap: 0.5rem;
   background-color: #ffffff;
-  color: #0C59C1;
+  color: #000000;
   font-weight: 600;
   font-size: 1.1rem;
   padding: 1rem 2rem;
@@ -92,7 +92,7 @@
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
   text-decoration: none;
-  color: #0C59C1;
+  color: #000000;
 }
 
 .buttonIcon {
@@ -121,7 +121,7 @@
   margin-bottom: 3rem;
   font-size: 2rem;
   font-weight: 700;
-  color: #1a1a1a;
+  color: #000000;
 }
 
 @media screen and (max-width: 996px) {
@@ -147,10 +147,10 @@
 
 .strategyCard {
   display: block;
-  background: linear-gradient(135deg, #0C59C1 0%, #0e63d9 100%);
+  background: #bab9b7;
   padding: 2.5rem;
   border-radius: 16px;
-  box-shadow: 0 4px 16px rgba(12, 89, 193, 0.2);
+  box-shadow: 0 4px 16px rgba(186, 185, 183, 0.3);
   transition: all 0.3s ease;
   text-decoration: none;
   color: #ffffff;
@@ -166,14 +166,14 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, transparent 100%);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
 .strategyCard:hover {
   transform: translateY(-8px);
-  box-shadow: 0 8px 28px rgba(12, 89, 193, 0.35);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.3);
   text-decoration: none;
   color: #ffffff;
 }
@@ -189,7 +189,7 @@
   width: 64px;
   height: 64px;
   background-color: #ffffff;
-  color: #0C59C1;
+  color: #000000;
   border-radius: 12px;
   font-size: 2rem;
   margin-bottom: 1.5rem;
@@ -203,7 +203,7 @@
 }
 
 .strategyDescription {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.85);
   line-height: 1.7;
   font-size: 1rem;
   margin: 0;
@@ -240,7 +240,7 @@
   background: #ffffff;
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
   transition: all 0.3s ease;
   border: 1px solid #e5e7eb;
 }
@@ -248,7 +248,7 @@
 .visionCard:hover {
   transform: translateY(-4px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
-  border-color: #0C59C1;
+  border-color: #bab9b7;
 }
 
 .visionIcon {
@@ -257,7 +257,7 @@
   justify-content: center;
   width: 56px;
   height: 56px;
-  color: #0C59C1;
+  color: #000000;
   font-size: 1.75rem;
   margin-bottom: 1.25rem;
 }
@@ -266,7 +266,7 @@
   margin-bottom: 0.75rem;
   font-size: 1.25rem;
   font-weight: 600;
-  color: #1a1a1a;
+  color: #000000;
 }
 
 .visionDescription {
@@ -278,7 +278,7 @@
 
 /* Dark mode adjustments */
 [data-theme='dark'] .heroBanner::before {
-  background: linear-gradient(135deg, rgba(7, 61, 131, 0.95) 0%, rgba(12, 89, 193, 0.9) 100%);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(30, 30, 30, 0.85) 100%);
 }
 
 [data-theme='dark'] .strategicSection {
@@ -289,21 +289,25 @@
   color: #ffffff;
 }
 
+[data-theme='dark'] .strategyCard {
+  background: #2d2d2d;
+}
+
 [data-theme='dark'] .visionSection {
   background-color: #111827;
 }
 
 [data-theme='dark'] .visionCard {
-  background: #1a1a1a;
-  border-color: #333333;
+  background: #1f2937;
+  border-color: #374151;
 }
 
 [data-theme='dark'] .visionCard:hover {
-  border-color: #4da3ff;
+  border-color: #ffffff;
 }
 
 [data-theme='dark'] .visionIcon {
-  color: #4da3ff;
+  color: #ffffff;
 }
 
 [data-theme='dark'] .visionTitle {
