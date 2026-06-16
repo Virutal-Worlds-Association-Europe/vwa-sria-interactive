@@ -10,11 +10,11 @@
   border: none;
   border-radius: 50px;
   background: #bab9b7;
-  color: #fff;
+  color: #000000;
   font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
-  box-shadow: 0 4px 16px rgba(186, 185, 183, 0.4), 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   opacity: 1;
   transform: translateY(0);
@@ -23,7 +23,7 @@
 
 .fab:hover {
   background: #a9a8a5;
-  box-shadow: 0 6px 24px rgba(186, 185, 183, 0.5), 0 3px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 20px rgba(186, 185, 183, 0.6), 0 0 0 1px rgba(186, 185, 183, 0.3);
   transform: translateY(-2px);
   animation: none;
 }
@@ -67,14 +67,14 @@
   }
 }
 
-/* Dark mode support */
+/* Dark mode support - match dark card style */
 [data-theme='dark'] .fab {
-  background: #ffffff;
-  color: #000000;
-  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(0, 0, 0, 0.3);
+  background: #2d2d2d;
+  color: #f3f4f6;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 [data-theme='dark'] .fab:hover {
-  background: #e6e6e6;
-  box-shadow: 0 6px 24px rgba(255, 255, 255, 0.25), 0 3px 8px rgba(0, 0, 0, 0.35);
+  background: #3d3d3d;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.08), 0 0 0 1px rgba(255, 255, 255, 0.06);
 }

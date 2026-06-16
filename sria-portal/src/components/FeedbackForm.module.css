@@ -2,6 +2,9 @@
   max-width: 800px;
   margin: 2rem auto;
   padding: 2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  margin-top: 3rem;
+  padding-top: 2.5rem;
 }
 
 .feedbackContainer h2 {
@@ -16,5 +19,15 @@
 
 .tallyFrame {
   border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+:global([data-theme='dark']) .feedbackContainer {
+  border-top-color: rgba(255, 255, 255, 0.15);
+}
+
+:global([data-theme='dark']) .tallyFrame {
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }

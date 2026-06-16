@@ -21,7 +21,7 @@ export default function TOCItemsWrapper(props: Props): React.ReactElement {
             display: 'flex',
             alignItems: 'center',
             gap: '6px',
-            color: 'var(--ifm-color-primary)',
+            color: 'var(--ifm-font-color-base)',
             fontWeight: 600,
           }}
         >

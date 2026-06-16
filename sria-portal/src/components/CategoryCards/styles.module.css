@@ -10,16 +10,16 @@
   align-items: center;
   gap: 1rem;
   padding: 1rem 1.5rem;
-  background: white;
-  border: 1px solid #e5e7eb;
+  background: #bab9b7;
+  border: 1px solid #bab9b7;
   border-radius: 0.75rem;
   transition: all 0.3s ease;
 }
 
 .categoryCard:hover {
-  background: #bab9b7;
-  border-color: #bab9b7;
-  box-shadow: 0 4px 12px rgba(186, 185, 183, 0.4);
+  background: #a9a8a5;
+  border-color: #a9a8a5;
+  box-shadow: 0 4px 20px rgba(186, 185, 183, 0.6), 0 0 0 1px rgba(186, 185, 183, 0.3);
   transform: translateY(-2px);
 }
 
@@ -37,8 +37,8 @@
 }
 
 .categoryCard:hover .iconContainer {
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
+  background: rgba(255, 255, 255, 0.3);
+  color: #000000;
 }
 
 .contentContainer {
@@ -56,19 +56,19 @@
 }
 
 .categoryCard:hover .cardTitle {
-  color: white;
+  color: #000000;
 }
 
 .cardDescription {
   margin: 0;
   font-size: 1rem;
   line-height: 1.6;
-  color: #4b5563;
+  color: #333333;
   transition: color 0.3s ease;
 }
 
 .categoryCard:hover .cardDescription {
-  color: rgba(255, 255, 255, 0.9);
+  color: #333333;
 }
 
 .learnMore {
@@ -91,7 +91,7 @@
 }
 
 .categoryCard:hover .learnMore {
-  color: white;
+  color: #000000;
 }
 
 .learnMore i {
@@ -105,30 +105,31 @@
 
 /* Dark mode support */
 [data-theme='dark'] .categoryCard {
-  background: #1f2937;
-  border-color: #374151;
+  background: #2d2d2d;
+  border-color: #3d3d3d;
 }
 
 [data-theme='dark'] .categoryCard:hover {
-  background: #ffffff;
-  border-color: #ffffff;
+  background: #3d3d3d;
+  border-color: #4a4a4a;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.08), 0 0 0 1px rgba(255, 255, 255, 0.06);
 }
 
 [data-theme='dark'] .categoryCard:hover .cardTitle {
-  color: #000000;
+  color: #ffffff;
 }
 
 [data-theme='dark'] .categoryCard:hover .cardDescription {
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 [data-theme='dark'] .categoryCard:hover .learnMore {
-  color: #000000;
+  color: #ffffff;
 }
 
 [data-theme='dark'] .categoryCard:hover .iconContainer {
-  background: rgba(0, 0, 0, 0.1);
-  color: #000000;
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
 }
 
 [data-theme='dark'] .cardTitle {
