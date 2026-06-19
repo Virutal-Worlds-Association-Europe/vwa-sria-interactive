@@ -712,3 +712,36 @@ a:hover {
   bottom: 80px !important;
   right: 24px !important;
 }
+
+/* Image utilities - composable wrappers for images in MD/MDX */
+
+/* .image-bg - Always-on dark panel behind the image (theme-agnostic) */
+/* Usage: <div class="image-bg">![alt](/img/foo.png)</div> */
+.image-bg {
+  background-color: #1a1a1a;
+  border-radius: var(--ifm-global-radius);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.image-bg img {
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+/* .image-invert-light - Flips black ↔ white in LIGHT mode (preserves hues) */
+/* Use when an image was designed for a dark background (white text/lines) */
+/* Usage: <div class="image-invert-light">![alt](/img/foo.png)</div> */
+[data-theme='light'] .image-invert-light img {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+/* .image-invert-dark - Flips black ↔ white in DARK mode (preserves hues) */
+/* Use when an image was designed for a light background (black text/lines) */
+/* Usage: <div class="image-invert-dark">![alt](/img/foo.png)</div> */
+[data-theme='dark'] .image-invert-dark img {
+  filter: invert(1) hue-rotate(180deg);
+}
