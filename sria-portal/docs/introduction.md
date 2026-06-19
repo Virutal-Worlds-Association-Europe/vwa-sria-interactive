@@ -13,8 +13,10 @@ and the economy gives context to the application and technology perspectives.
 VW are persistent, immersive environments, based on technologies including 3D and extended reality
 (XR), which make it possible to blend physical and digital worlds in real-time, for a variety of purposes
 such as designing, making simulations, collaborating, learning, socialising, carrying out transactions or
-providing entertainment.  They encompass a wide range of digital experiences, from fully immersive VW
+providing entertainment[<sup>1</sup>](https://digital-strategy.ec.europa.eu/en/library/eu-initiative-virtual-worlds-head-start-next-technological-transition). 
+They encompass a wide range of digital experiences, from fully immersive VW
 to AR overlays on the physical world, that enable new ways to solve real world problems.
+
 ## Vision of the future
 
 Imagine a world where VW are fully established, seamlessly blending physical and digital realities to
@@ -216,8 +218,8 @@ to funding and resource management.
 
 VW are expected to significantly reshape Europe's economic landscape, offering substantial growth and
 job creation opportunities across various sectors. The global market for VW is projected to experience
-substantial growth, expanding from an estimated €27 billion in 2022 to over €800 billion by 20302. The
-European Commission is ready to play a pivotal role in accelerating the development and widespread
+substantial growth, expanding from an estimated €27 billion in 2022 to over €800 billion by 2030[<sup>2</sup>](https://digital-strategy.ec.europa.eu/en/factpages/virtual-worlds). 
+The European Commission is ready to play a pivotal role in accelerating the development and widespread
 adoption of VW across member states. By fostering a robust European Web 4.0 industrial ecosystem and
 investing in critical infrastructure and skills, the Commission can significantly contribute to the
 increased GDP of member states through new economic opportunities and enhanced productivity
