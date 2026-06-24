@@ -148,7 +148,7 @@
 
 .strategyCard {
   display: block;
-  background: #d5d4d2;
+  background: #ece5c0;
   padding: 2.5rem;
   border-radius: 16px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
@@ -174,8 +174,8 @@
 
 .strategyCard:hover {
   transform: translateY(-4px);
-  background: #c4c3c1;
-  box-shadow: 0 6px 20px rgba(213, 212, 210, 0.6), 0 0 0 1px rgba(213, 212, 210, 0.3);
+  background: #ece5c0;
+  box-shadow: 0 6px 20px rgba(236, 229, 192, 0.6), 0 0 0 1px rgba(236, 229, 192, 0.3);
   text-decoration: none;
   color: #000000;
 }
@@ -239,7 +239,7 @@
 
 .visionCard {
   display: block;
-  background: #d5d4d2;
+  background: #ece5c0;
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
