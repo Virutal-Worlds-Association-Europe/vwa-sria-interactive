@@ -658,14 +658,16 @@ a:hover {
   flex: 0 0 300px;
   max-width: 300px;
   padding: 1.5rem 1rem;
-  background-color: #f8f7f3;
+  background-color: #ffffff;
   min-height: 100vh;
   border-right: 1px solid #eeede9;
+  border-radius: 15px;
 }
 
 [data-theme='dark'] .col.col--3 {
   background-color: #1a1a1a;
   border-right-color: transparent;
+  border-radius: 15px;
 }
 
 /* Add "Jump to" heading before TOC */
