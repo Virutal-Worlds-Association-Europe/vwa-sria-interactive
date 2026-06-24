@@ -166,10 +166,10 @@ The Docusaurus runtime configuration currently targets the custom domain above.
 
 ## Feedback And Privacy
 
-The project configures Google Analytics 4 through Docusaurus' built-in gtag
-integration, using the `G-1SERDQHGJD` measurement ID with IP anonymization
-enabled. Google Tag Manager is not configured. Search is generated locally by
-the Docusaurus search plugin.
+The project uses a custom consent-gated Google Analytics 4 loader with the
+`G-1SERDQHGJD` measurement ID and IP anonymization enabled. GA4 is only loaded
+after the visitor accepts analytics cookies. Google Tag Manager is not
+configured. Search is generated locally by the Docusaurus search plugin.
 
 The current site also loads these external resources:
 

@@ -714,3 +714,17 @@ a:hover {
   bottom: 80px !important;
   right: 24px !important;
 }
+
+.cookie-settings-link {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+}
+
+.cookie-settings-link:hover,
+.cookie-settings-link:focus-visible {
+  text-decoration: underline;
+}

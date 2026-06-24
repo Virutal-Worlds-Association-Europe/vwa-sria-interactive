@@ -138,9 +138,10 @@ The docs route base path is `docs`, so documentation pages are served under
 
 ## External Services
 
-The app configures Google Analytics 4 through Docusaurus' built-in gtag
-integration, using the `G-1SERDQHGJD` measurement ID with IP anonymization
-enabled. Google Tag Manager is not configured.
+The app uses a custom consent-gated Google Analytics 4 loader with the
+`G-1SERDQHGJD` measurement ID and IP anonymization enabled. GA4 is only loaded
+after the visitor accepts analytics cookies. Google Tag Manager is not
+configured.
 
 The current implementation also loads:
 

@@ -56,10 +56,8 @@ const config: Config = {
         theme: {
           customCss: './src/css/custom.css',
         },
-        gtag: {
-          trackingID: 'G-1SERDQHGJD',
-          anonymizeIP: true,
-        },
+        // GA4 is loaded from a custom consent-gated client module.
+        gtag: undefined,
         googleAnalytics: undefined,
         googleTagManager: undefined,
       } satisfies Preset.Options,
@@ -162,6 +160,9 @@ const config: Config = {
             {
               label: 'Privacy Policy',
               href: 'https://docs.google.com/document/d/e/2PACX-1vQeQq7FhZwTwIkaVib4txK0UeY7n2hO2hhKUCuknYEOZMavNY5kTvJP_opD3eKfvA/pub',
+            },
+            {
+              html: '<button type="button" class="footer__link-item cookie-settings-link" data-analytics-consent-open>Cookie settings</button>',
             },
           ],
         },
