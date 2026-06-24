@@ -28,11 +28,11 @@ section-aware feedback forms.
 
 ## Requirements
 
-- Node.js `20.0` or newer.
+- Node.js `24.0` or newer.
 - npm. The repository includes `sria-portal/package-lock.json`, so `npm ci` is preferred for clean installs.
 
-The app may work on newer Node versions as well. The package engine requires
-Node `>=20.0`.
+The package engine requires Node `>=24.0`, and the GitHub Pages workflow builds
+with Node `24`.
 
 ## Run Locally
 
