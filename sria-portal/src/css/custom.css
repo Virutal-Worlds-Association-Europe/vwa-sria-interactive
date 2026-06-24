@@ -260,6 +260,12 @@
   border-right-color: transparent;
 }
 
+@media (min-width: 997px) {
+  .theme-doc-sidebar-container.theme-doc-sidebar-container {
+    border-right: 0;
+  }
+}
+
 .menu__link {
   border-radius: 0.375rem;
   font-size: 0.875rem;
