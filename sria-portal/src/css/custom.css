@@ -226,9 +226,10 @@
   color: #000000;
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  line-height: 1.35;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
 }
 
 .menu__link--active {
@@ -493,9 +494,9 @@ a:hover {
   align-items: center;
   gap: 1rem;
   padding: 1rem 1.5rem;
-  border: 1px solid #d5d4d2;
+  border: 1px solid #000000;
   border-radius: 3rem;
-  background: #d5d4d2;
+  background: #000000;
   transition: all 0.3s ease;
   text-decoration: none;
   flex: 0 1 auto;
@@ -503,10 +504,10 @@ a:hover {
 }
 
 .pagination-nav__link:hover {
-  background: #c4c3c1;
-  border-color: #c4c3c1;
+  background: #000000;
+  border-color: #000000;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(213, 212, 210, 0.6), 0 0 0 1px rgba(213, 212, 210, 0.3);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(0, 0, 0, 0.15);
   text-decoration: none;
 }
 
@@ -525,16 +526,16 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.15);
   border-radius: 50%;
-  color: #000000;
+  color: #ffffff;
   font-size: 1.125rem;
   transition: all 0.3s ease;
 }
 
 .pagination-nav__link:hover .pagination-nav__icon {
-  background: rgba(0, 0, 0, 0.2);
-  color: #000000;
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
 }
 
 .pagination-nav__content {
@@ -547,51 +548,51 @@ a:hover {
 .pagination-nav__sublabel {
   font-size: 0.875rem;
   font-weight: 500;
-  color: #6b7280;
+  color: rgba(255, 255, 255, 0.72);
   text-transform: capitalize;
 }
 
 .pagination-nav__link:hover .pagination-nav__sublabel {
-  color: #4b5563;
+  color: rgba(255, 255, 255, 0.84);
 }
 
 .pagination-nav__label {
   font-size: 1rem;
   font-weight: 600;
-  color: #000000;
+  color: #ffffff;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
 .pagination-nav__link:hover .pagination-nav__label {
-  color: #000000;
+  color: #ffffff;
 }
 
 /* Dark mode pagination */
 [data-theme='dark'] .pagination-nav__link {
-  border-color: #3d3d3d;
-  background: #2d2d2d;
+  border-color: #000000;
+  background: #000000;
 }
 
 [data-theme='dark'] .pagination-nav__link:hover {
-  background: #3d3d3d;
-  border-color: #4a4a4a;
-  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.08), 0 0 0 1px rgba(255, 255, 255, 0.06);
+  background: #000000;
+  border-color: #000000;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.08);
 }
 
 [data-theme='dark'] .pagination-nav__icon {
-  background: #4a4a4a;
-  color: #f3f4f6;
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
 }
 
 [data-theme='dark'] .pagination-nav__link:hover .pagination-nav__icon {
-  background: #555555;
-  color: #f3f4f6;
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
 }
 
 [data-theme='dark'] .pagination-nav__label {
-  color: #f3f4f6;
+  color: #ffffff;
 }
 
 [data-theme='dark'] .pagination-nav__link:hover .pagination-nav__label {
@@ -599,11 +600,11 @@ a:hover {
 }
 
 [data-theme='dark'] .pagination-nav__sublabel {
-  color: #9ca3af;
+  color: rgba(255, 255, 255, 0.72);
 }
 
 [data-theme='dark'] .pagination-nav__link:hover .pagination-nav__sublabel {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.84);
 }
 
 /* Responsive pagination */
@@ -658,14 +659,16 @@ a:hover {
   flex: 0 0 300px;
   max-width: 300px;
   padding: 1.5rem 1rem;
-  background-color: #f8f7f3;
+  background-color: #ffffff;
   min-height: 100vh;
   border-right: 1px solid #eeede9;
+  border-radius: 15px;
 }
 
 [data-theme='dark'] .col.col--3 {
   background-color: #1a1a1a;
   border-right-color: transparent;
+  border-radius: 15px;
 }
 
 /* Add "Jump to" heading before TOC */
@@ -711,4 +714,18 @@ a:hover {
 .theme-back-to-top-button {
   bottom: 80px !important;
   right: 24px !important;
+}
+
+.cookie-settings-link {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+}
+
+.cookie-settings-link:hover,
+.cookie-settings-link:focus-visible {
+  text-decoration: underline;
 }

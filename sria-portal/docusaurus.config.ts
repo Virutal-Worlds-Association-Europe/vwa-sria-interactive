@@ -8,7 +8,14 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   future: {
-    v4: true,
+    v4: {
+      removeLegacyPostBuildHeadAttribute: true,
+      useCssCascadeLayers: true,
+      siteStorageNamespacing: true,
+      fasterByDefault: false,
+      mdx1CompatDisabledByDefault: true,
+    },
+    faster: false,
   },
 
   url: 'https://sria.virtualworldsassociation.eu',
@@ -21,7 +28,11 @@ const config: Config = {
   trailingSlash: false,
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
 
   i18n: {
     defaultLocale: 'en',
@@ -56,7 +67,7 @@ const config: Config = {
         theme: {
           customCss: './src/css/custom.css',
         },
-        // No Google Analytics - GDPR compliant
+        // GA4 is loaded from a custom consent-gated client module.
         gtag: undefined,
         googleAnalytics: undefined,
         googleTagManager: undefined,
@@ -83,7 +94,6 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'Virtual Worlds SRIA',
       logo: {
         alt: 'Virtual Worlds Association Logo',
         src: 'img/vwa-logo.png',
@@ -162,10 +172,13 @@ const config: Config = {
               label: 'Privacy Policy',
               href: 'https://docs.google.com/document/d/e/2PACX-1vQeQq7FhZwTwIkaVib4txK0UeY7n2hO2hhKUCuknYEOZMavNY5kTvJP_opD3eKfvA/pub',
             },
+            {
+              html: '<button type="button" class="footer__link-item cookie-settings-link" data-analytics-consent-open>Cookie settings</button>',
+            },
           ],
         },
       ],
-      copyright: `© ${new Date().getFullYear()} Virtual Worlds Association. Built with Docusaurus. No tracking cookies used.`,
+      copyright: `© ${new Date().getFullYear()} Virtual Worlds Association. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

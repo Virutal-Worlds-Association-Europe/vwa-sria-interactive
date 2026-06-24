@@ -1,250 +1,234 @@
 # Virtual Worlds SRIA Portal
 
-A GDPR-compliant documentation portal for the Virtual Worlds Strategic Research and Innovation Agenda, built with Docusaurus v3.
+This directory contains the Docusaurus application for the Virtual Worlds SRIA
+Portal. It is a static documentation site built with Docusaurus v3, TypeScript,
+React, local search, custom documentation components, and embedded feedback
+forms.
 
-## 🌟 Features
+## Requirements
 
-- **Privacy-First Design**: No cookies, no tracking, no analytics
-- **Local Search**: Fast, privacy-respecting search using @easyops-cn/docusaurus-search-local
-- **GDPR Compliant**: Follows EU data protection regulations
-- **Responsive Design**: Works seamlessly on all devices
-- **Dark Mode Support**: Respects user's system preferences
-- **Feedback Integration**: Tally.so embedded forms for user feedback
+- Node.js `20.0` or newer.
+- npm. Use `npm ci` for a clean install from `package-lock.json`.
 
-## 📋 Prerequisites
+## Local Development
 
-- Node.js 18.0 or higher
-- npm or yarn package manager
-
-## 🚀 Quick Start
-
-### Installation
-
-```bash
-cd sria-portal
-npm install
-```
-
-### Development
-
-Start the development server:
-
-```bash
+```powershell
+npm ci
 npm start
 ```
 
-This will start a local development server at `http://localhost:3000` with hot-reloading enabled.
+Open:
 
-### Build
-
-Create a production build:
-
-```bash
-npm run build
+```text
+http://localhost:3000
 ```
 
-The static files will be generated in the `build/` directory.
+The development server supports hot reloading.
 
-### Serve Locally
+## Production Build
 
-Test the production build locally:
-
-```bash
+```powershell
+npm run build
 npm run serve
 ```
 
-## 📁 Project Structure
+The build output is written to:
 
+```text
+build/
 ```
+
+Although this project generates static files, test it through `npm run serve`
+or another local web server instead of opening `build/index.html` directly.
+
+## Scripts
+
+```powershell
+npm start                 # Start Docusaurus locally
+npm run build             # Generate the production static site
+npm run serve             # Serve the production build locally
+npm run typecheck         # Run TypeScript checks
+npm run clear             # Clear Docusaurus caches
+npm run swizzle           # Run Docusaurus swizzle tooling
+npm run deploy            # Run Docusaurus deployment tooling
+npm run write-translations
+npm run write-heading-ids
+```
+
+There are currently no `lint` or `format` scripts in `package.json`.
+
+## Application Structure
+
+```text
 sria-portal/
-├── docs/                          # Markdown documentation files
-│   ├── 00-introduction.md         # Introduction
-│   ├── 01-applications/           # Chapter 1: Applications
-│   │   ├── 1a-industry.md
-│   │   ├── 1b-healthcare.md
-│   │   └── ...
-│   ├── 02-technology/             # Chapter 2: Technology
-│   ├── 03-socio-economic/         # Chapter 3: Socio-Economic
-│   └── 04-context/                # Chapter 4: European Context
-├── src/
-│   ├── components/                # React components
-│   │   ├── FeedbackForm.tsx       # Tally.so feedback integration
-│   │   └── FeedbackForm.module.css
-│   ├── pages/                     # Custom pages
-│   │   ├── index.tsx              # Homepage
-│   │   ├── index.module.css
-│   └── css/
-│       └── custom.css             # Global styles
-├── static/                        # Static assets (images, etc.)
-├── docusaurus.config.ts           # Docusaurus configuration
-├── sidebars.ts                    # Sidebar configuration
-└── package.json
+|-- docs/
+|   |-- introduction.md
+|   |-- 01-applications/
+|   |-- 02-technology/
+|   |-- 03-socio-economic/
+|   `-- 04-context/
+|-- src/
+|   |-- components/
+|   |   |-- CategoryCards/
+|   |   |-- FeedbackFab/
+|   |   |-- FeedbackForm.tsx
+|   |   `-- HomepageFeatures/
+|   |-- css/
+|   |   `-- custom.css
+|   |-- pages/
+|   |   |-- index.tsx
+|   |   |-- index.module.css
+|   |   `-- markdown-page.md
+|   `-- theme/
+|       |-- DocItem/Footer/
+|       |-- DocPaginator/
+|       |-- PaginatorNavLink/
+|       `-- TOCItems/
+|-- static/img/
+|-- docusaurus.config.ts
+|-- package.json
+|-- package-lock.json
+|-- sidebars.ts
+`-- tsconfig.json
 ```
 
-## 🎨 Customization
+## Current Content
 
-### Update Site Configuration
+The site currently has 26 documentation source pages:
 
-Edit `docusaurus.config.ts` to modify:
-- Site title and tagline
-- URL and base URL
-- Navigation items
-- Footer content
+- Introduction.
+- Four section landing pages.
+- 21 SRIA chapter pages.
 
-### Modify Content
+The main routes are:
 
-1. **Documentation**: Edit markdown files in the `docs/` directory
-2. **Homepage**: Edit `src/pages/index.tsx`
-3. **Styles**: Edit `src/css/custom.css` for global styles
+- `/docs/introduction`
+- `/docs/applications`
+- `/docs/technology`
+- `/docs/socio-economic`
+- `/docs/context`
 
-### Configure Feedback Form
+## Implemented Features
 
-1. Create a form on [Tally.so](https://tally.so)
-2. Get your form ID
-3. Update `src/components/FeedbackForm.tsx`:
-   ```tsx
-   data-tally-src="https://tally.so/embed/YOUR_FORM_ID?..."
-   ```
+- Docusaurus classic preset with docs enabled and blog disabled.
+- Custom homepage in `src/pages/index.tsx`.
+- Category-card landing pages for the four major SRIA areas.
+- Autogenerated sidebar sections configured in `sidebars.ts`.
+- Local search through `@easyops-cn/docusaurus-search-local`.
+- Custom documentation footer that appends a Tally.so feedback form.
+- Floating feedback button on documentation pages.
+- Custom table-of-contents feedback link.
+- Custom previous/next paginator styling.
+- Light and dark theme support through Docusaurus color mode.
+- Static images under `static/img/`.
 
-## 🔒 Privacy & GDPR Compliance
+## Configuration
 
-This site is designed to be fully GDPR compliant:
+Important deployment settings are in `docusaurus.config.ts`.
 
-- ✅ No cookies
-- ✅ No tracking scripts
-- ✅ No Google Analytics
-- ✅ Local search only
-- ✅ Privacy policy included
-- ✅ Minimal data collection
-
-The only external service used is Tally.so for feedback forms, which is also GDPR compliant.
-
-## 📦 Deployment
-
-### Deploy to GitHub Pages
-
-1. Update `docusaurus.config.ts`:
-   ```typescript
-   url: 'https://your-username.github.io',
-   baseUrl: '/repository-name/',
-   organizationName: 'your-username',
-   projectName: 'repository-name',
-   ```
-
-2. Deploy:
-   ```bash
-   npm run deploy
-   ```
-
-### Deploy to Netlify
-
-1. Connect your repository to Netlify
-2. Configure build settings:
-   - Build command: `npm run build`
-   - Publish directory: `build`
-3. Deploy
-
-### Deploy to Vercel
-
-1. Import your repository in Vercel
-2. Configure:
-   - Framework Preset: Other
-   - Build Command: `npm run build`
-   - Output Directory: `build`
-3. Deploy
-
-### Deploy to Custom Server
-
-1. Build the site:
-   ```bash
-   npm run build
-   ```
-
-2. Upload the `build/` directory to your web server
-
-3. Configure your web server to:
-   - Serve `index.html` for all routes (for SPA routing)
-   - Enable HTTPS
-   - Set appropriate cache headers
-
-## 🔍 Search Configuration
-
-The local search plugin is configured in `docusaurus.config.ts`:
-
-```typescript
-plugins: [
-  [
-    require.resolve('@easyops-cn/docusaurus-search-local'),
-    {
-      hashed: true,
-      language: ['en'],
-      indexBlog: false,
-      indexPages: true,
-      docsRouteBasePath: '/docs',
-    },
-  ],
-],
+```ts
+url: 'https://sria.virtualworldsassociation.eu'
+baseUrl: '/'
+deploymentBranch: 'gh-pages'
+trailingSlash: false
 ```
 
-## 🛠 Development Tips
+The docs route base path is `docs`, so documentation pages are served under
+`/docs/...`.
 
-### Clear Cache
+## External Services
 
-If you encounter issues, try clearing the cache:
+The app uses a custom consent-gated Google Analytics 4 loader with the
+`G-1SERDQHGJD` measurement ID and IP anonymization enabled. GA4 is only loaded
+after the visitor accepts analytics cookies. Google Tag Manager is not
+configured.
 
-```bash
+The current implementation also loads:
+
+- Font Awesome CSS from `cdnjs.cloudflare.com`.
+- Tally.so embed scripts and iframes for feedback collection.
+
+Privacy documentation for the deployed site should mention these services.
+
+## Editing Content
+
+Documentation pages live in `docs/`. Category landing pages are MDX files and
+can import React components such as `CategoryCards`.
+
+Use the existing naming pattern when adding chapter pages:
+
+```text
+1a-industry.md
+2a-visualisation.md
+3a-human-rights.md
+4a-data.md
+```
+
+After edits:
+
+```powershell
+npm start
+npm run build
+```
+
+## Customization
+
+- Main Docusaurus configuration: `docusaurus.config.ts`.
+- Sidebar configuration: `sidebars.ts`.
+- Homepage content and layout: `src/pages/index.tsx`.
+- Global theme styles and CSS variables: `src/css/custom.css`.
+- Feedback form embed and hidden fields: `src/components/FeedbackForm.tsx`.
+- Floating feedback button: `src/components/FeedbackFab/`.
+- Category landing cards: `src/components/CategoryCards/`.
+- Swizzled documentation theme wrappers: `src/theme/`.
+
+To change the Tally feedback form, update the form ID and parameters in
+`src/components/FeedbackForm.tsx`.
+
+## Deployment
+
+Build the site and deploy the contents of `build/` to a static host:
+
+```powershell
+npm run build
+```
+
+If deploying somewhere other than the currently configured custom domain, update
+`url` and `baseUrl` in `docusaurus.config.ts` before building.
+
+Common static-host settings:
+
+- Build command: `npm run build`
+- Publish directory: `build`
+- Working directory: `sria-portal` when configuring from the repository root.
+
+For GitHub Pages deployments through Docusaurus, review `organizationName`,
+`projectName`, `deploymentBranch`, `url`, and `baseUrl` before running
+`npm run deploy`.
+
+## Troubleshooting
+
+If Docusaurus behaves unexpectedly after content or config changes, clear its
+cache and restart:
+
+```powershell
 npm run clear
 npm start
 ```
 
-### Update Dependencies
+To inspect outdated dependencies:
 
-Check for outdated packages:
-
-```bash
+```powershell
 npm outdated
 ```
 
-Update packages:
+## Contributing
 
-```bash
-npm update
-```
+The repository-level `CONTRIBUTING.md` and `CODE_OF_CONDUCT.md` files define the
+contribution and participation guidelines.
 
-## 📝 Content Migration Status
+## Maintenance Notes
 
-✅ Completed:
-- Introduction
-- Chapter 1a: Industry and Logistics
-- Homepage with vision
-- Privacy policy
-- Feedback component
-- Site configuration
-
-🚧 In Progress:
-- Remaining application chapters (1b-1g)
-- Technology chapters (2a-2f)
-- Socio-economic chapters (3a-3e)
-- European context chapters (4a-4c)
-
-## 🤝 Contributing
-
-To add or modify content:
-
-1. Edit the relevant markdown files in `docs/`
-2. Test locally with `npm start`
-3. Build and verify with `npm run build && npm run serve`
-4. Commit and push your changes
-
-## 📄 License
-
-Please refer to the official Virtual Worlds Association documentation for licensing information.
-
-## 🆘 Support
-
-For issues or questions:
-- Check the [Docusaurus documentation](https://docusaurus.io/)
-- Review the [Privacy Policy](https://docs.google.com/document/d/e/2PACX-1vQeQq7FhZwTwIkaVib4txK0UeY7n2hO2hhKUCuknYEOZMavNY5kTvJP_opD3eKfvA/pub)
-- Submit feedback through the integrated feedback form
-
-
+The current production build succeeds. Docusaurus currently prints warnings
+about `onBrokenMarkdownLinks` being deprecated for v4 and Browserslist data
+being out of date. These warnings do not block the build.

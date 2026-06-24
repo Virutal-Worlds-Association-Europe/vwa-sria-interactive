@@ -70,18 +70,20 @@ export default function FeedbackForm({
         Share your thoughts on <strong>{sectionTitle}</strong>. Your feedback helps shape
         Europe's Virtual Worlds research priorities.
       </p>
-      <iframe
-        ref={iframeRef}
-        data-tally-src={buildTallyUrl()}
-        loading="lazy"
-        width="100%"
-        height="500"
-        frameBorder="0"
-        marginHeight={0}
-        marginWidth={0}
-        title="Feedback Form"
-        className={styles.tallyFrame}
-      ></iframe>
+      <div className={styles.tallyFrameShell}>
+        <iframe
+          ref={iframeRef}
+          data-tally-src={buildTallyUrl()}
+          loading="lazy"
+          width="100%"
+          height="500"
+          frameBorder="0"
+          marginHeight={0}
+          marginWidth={0}
+          title="Feedback Form"
+          className={styles.tallyFrame}
+        ></iframe>
+      </div>
     </div>
   );
 }
