@@ -71,14 +71,12 @@ sria-portal/
 |   |-- components/
 |   |   |-- CategoryCards/
 |   |   |-- FeedbackFab/
-|   |   |-- FeedbackForm.tsx
-|   |   `-- HomepageFeatures/
+|   |   `-- FeedbackForm.tsx
 |   |-- css/
 |   |   `-- custom.css
 |   |-- pages/
-|   |   |-- index.tsx
 |   |   |-- index.module.css
-|   |   `-- markdown-page.md
+|   |   `-- index.tsx
 |   `-- theme/
 |       |-- DocItem/Footer/
 |       |-- DocPaginator/

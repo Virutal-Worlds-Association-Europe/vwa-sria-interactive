@@ -112,14 +112,12 @@ There are currently no `lint` or `format` scripts configured in
     |   |-- components/
     |   |   |-- CategoryCards/
     |   |   |-- FeedbackFab/
-    |   |   |-- FeedbackForm.tsx
-    |   |   `-- HomepageFeatures/
+    |   |   `-- FeedbackForm.tsx
     |   |-- css/
     |   |   `-- custom.css
     |   |-- pages/
-    |   |   |-- index.tsx
     |   |   |-- index.module.css
-    |   |   `-- markdown-page.md
+    |   |   `-- index.tsx
     |   `-- theme/
     |       |-- DocItem/Footer/
     |       |-- DocPaginator/
