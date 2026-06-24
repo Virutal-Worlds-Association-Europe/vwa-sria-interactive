@@ -257,6 +257,7 @@
 /* Sidebar Styling */
 .theme-doc-sidebar-container {
   background-color: var(--vwa-bg);
+  border-right-color: transparent;
 }
 
 .menu__link {
@@ -332,6 +333,7 @@
 
 [data-theme='dark'] .theme-doc-sidebar-container {
   background-color: var(--vwa-bg);
+  border-right-color: transparent;
 }
 
 [data-theme='dark'] .menu__link {
@@ -706,13 +708,13 @@ a:hover {
   padding: 1.5rem 1rem;
   background-color: var(--vwa-surface);
   min-height: 100vh;
-  border-right: 1px solid var(--vwa-border-soft);
+  border-right: 1px solid transparent;
   border-radius: 15px;
 }
 
 [data-theme='dark'] .col.col--3 {
-  background-color: var(--vwa-bg);
-  border-right-color: var(--vwa-border-soft);
+  background-color: var(--vwa-surface);
+  border-right-color: transparent;
   border-radius: 15px;
 }
 
