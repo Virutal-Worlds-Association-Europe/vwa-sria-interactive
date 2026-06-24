@@ -1,10 +1,8 @@
 .feedbackContainer {
   max-width: 800px;
-  margin: 2rem auto;
-  padding: 2rem;
+  margin: 3rem 0 2rem;
+  padding: 2.5rem 0 0;
   border-top: 1px solid rgba(0, 0, 0, 0.15);
-  margin-top: 3rem;
-  padding-top: 2.5rem;
 }
 
 .feedbackContainer h2 {
@@ -17,17 +15,34 @@
   color: var(--ifm-color-emphasis-700);
 }
 
-.tallyFrame {
+.tallyFrameShell {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 1.25rem;
   border-radius: 8px;
   border: 1px solid rgba(0, 0, 0, 0.15);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.tallyFrame {
+  display: block;
+  border: 0;
+  border-radius: 6px;
 }
 
 :global([data-theme='dark']) .feedbackContainer {
   border-top-color: rgba(255, 255, 255, 0.15);
 }
 
-:global([data-theme='dark']) .tallyFrame {
+:global([data-theme='dark']) .tallyFrameShell {
   border-color: rgba(255, 255, 255, 0.15);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+@media (max-width: 600px) {
+  .tallyFrameShell {
+    padding: 0.75rem;
+  }
 }
