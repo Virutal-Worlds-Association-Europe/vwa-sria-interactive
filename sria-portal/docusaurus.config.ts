@@ -56,8 +56,10 @@ const config: Config = {
         theme: {
           customCss: './src/css/custom.css',
         },
-        // No Google Analytics - GDPR compliant
-        gtag: undefined,
+        gtag: {
+          trackingID: 'G-1SERDQHGJD',
+          anonymizeIP: true,
+        },
         googleAnalytics: undefined,
         googleTagManager: undefined,
       } satisfies Preset.Options,
@@ -164,7 +166,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `© ${new Date().getFullYear()} Virtual Worlds Association. Built with Docusaurus. No tracking cookies used.`,
+      copyright: `© ${new Date().getFullYear()} Virtual Worlds Association. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

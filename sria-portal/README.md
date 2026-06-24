@@ -138,14 +138,16 @@ The docs route base path is `docs`, so documentation pages are served under
 
 ## External Services
 
-The app does not configure Google Analytics, Google Tag Manager, or gtag.
+The app configures Google Analytics 4 through Docusaurus' built-in gtag
+integration, using the `G-1SERDQHGJD` measurement ID with IP anonymization
+enabled. Google Tag Manager is not configured.
 
-The current implementation does load:
+The current implementation also loads:
 
 - Font Awesome CSS from `cdnjs.cloudflare.com`.
 - Tally.so embed scripts and iframes for feedback collection.
 
-Privacy documentation for the deployed site should mention those services.
+Privacy documentation for the deployed site should mention these services.
 
 ## Editing Content
 

@@ -166,15 +166,17 @@ The Docusaurus runtime configuration currently targets the custom domain above.
 
 ## Feedback And Privacy
 
-The project does not configure Google Analytics, Google Tag Manager, or gtag.
-Search is generated locally by the Docusaurus search plugin.
+The project configures Google Analytics 4 through Docusaurus' built-in gtag
+integration, using the `G-1SERDQHGJD` measurement ID with IP anonymization
+enabled. Google Tag Manager is not configured. Search is generated locally by
+the Docusaurus search plugin.
 
-The current site does load two external resources:
+The current site also loads these external resources:
 
 - Font Awesome CSS from `cdnjs.cloudflare.com`.
 - Tally.so scripts and embedded forms for page feedback.
 
-Any privacy or GDPR statement for the deployed site should account for those
+Any privacy or GDPR statement for the deployed site should account for these
 external services.
 
 ## Editing Content
