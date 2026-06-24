@@ -226,9 +226,10 @@
   color: #000000;
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  line-height: 1.35;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
 }
 
 .menu__link--active {
