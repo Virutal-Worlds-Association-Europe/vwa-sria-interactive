@@ -89,7 +89,7 @@ const config: Config = {
   ],
 
   themeConfig: {
-    image: 'img/sria-social-card.jpg',
+    image: 'img/vwa-logo.png',
     colorMode: {
       respectPrefersColorScheme: true,
     },

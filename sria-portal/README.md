@@ -7,7 +7,7 @@ forms.
 
 ## Requirements
 
-- Node.js `20.0` or newer.
+- Node.js `24.0` or newer.
 - npm. Use `npm ci` for a clean install from `package-lock.json`.
 
 ## Local Development
@@ -71,14 +71,12 @@ sria-portal/
 |   |-- components/
 |   |   |-- CategoryCards/
 |   |   |-- FeedbackFab/
-|   |   |-- FeedbackForm.tsx
-|   |   `-- HomepageFeatures/
+|   |   `-- FeedbackForm.tsx
 |   |-- css/
 |   |   `-- custom.css
 |   |-- pages/
-|   |   |-- index.tsx
 |   |   |-- index.module.css
-|   |   `-- markdown-page.md
+|   |   `-- index.tsx
 |   `-- theme/
 |       |-- DocItem/Footer/
 |       |-- DocPaginator/
