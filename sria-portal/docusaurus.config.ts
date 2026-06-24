@@ -83,7 +83,6 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'Virtual Worlds SRIA',
       logo: {
         alt: 'Virtual Worlds Association Logo',
         src: 'img/vwa-logo.png',
