@@ -10,16 +10,16 @@
   align-items: center;
   gap: 1rem;
   padding: 1rem 1.5rem;
-  background: #ece5c0;
-  border: 1px solid #ece5c0;
+  background: var(--vwa-card);
+  border: 1px solid var(--vwa-card-border);
   border-radius: 0.75rem;
   transition: all 0.3s ease;
 }
 
 .categoryCard:hover {
-  background: #ece5c0;
-  border-color: #ece5c0;
-  box-shadow: 0 4px 20px rgba(236, 229, 192, 0.6), 0 0 0 1px rgba(236, 229, 192, 0.3);
+  background: var(--vwa-card-hover);
+  border-color: var(--vwa-card-border);
+  box-shadow: 0 4px 20px var(--vwa-card-shadow), 0 0 0 1px var(--vwa-border-soft);
   transform: translateY(-2px);
 }
 
@@ -30,15 +30,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: white;
+  background: var(--vwa-surface);
   border-radius: 0.5rem;
   font-size: 1.25rem;
-  color: #000000;
+  color: var(--vwa-ink);
 }
 
 .categoryCard:hover .iconContainer {
   background: rgba(255, 255, 255, 0.3);
-  color: #000000;
+  color: var(--vwa-ink);
 }
 
 .contentContainer {
@@ -50,25 +50,25 @@
   margin: 0 0 0.5rem 0;
   font-size: 1.5rem;
   font-weight: 600;
-  color: #000000;
+  color: var(--vwa-ink);
   line-height: 1.3;
   transition: color 0.3s ease;
 }
 
 .categoryCard:hover .cardTitle {
-  color: #000000;
+  color: var(--vwa-ink);
 }
 
 .cardDescription {
   margin: 0;
   font-size: 1rem;
   line-height: 1.6;
-  color: #333333;
+  color: var(--vwa-muted);
   transition: color 0.3s ease;
 }
 
 .categoryCard:hover .cardDescription {
-  color: #333333;
+  color: var(--vwa-muted);
 }
 
 .learnMore {
@@ -79,7 +79,7 @@
   padding: 0.75rem 1.5rem;
   font-weight: 600;
   font-size: 1rem;
-  color: #000000;
+  color: var(--vwa-ink);
   text-decoration: none;
   white-space: nowrap;
   transition: all 0.2s ease;
@@ -91,7 +91,7 @@
 }
 
 .categoryCard:hover .learnMore {
-  color: #000000;
+  color: var(--vwa-ink);
 }
 
 .learnMore i {
@@ -105,48 +105,48 @@
 
 /* Dark mode support */
 [data-theme='dark'] .categoryCard {
-  background: #3b351d;
-  border-color: #4f4728;
+  background: var(--vwa-card);
+  border-color: var(--vwa-card-border);
 }
 
 [data-theme='dark'] .categoryCard:hover {
-  background: #463f24;
-  border-color: #5b5230;
-  box-shadow: 0 4px 20px rgba(236, 229, 192, 0.08), 0 0 0 1px rgba(236, 229, 192, 0.06);
+  background: var(--vwa-card-hover);
+  border-color: var(--vwa-border);
+  box-shadow: 0 4px 20px var(--vwa-card-shadow), 0 0 0 1px var(--vwa-border-soft);
 }
 
 [data-theme='dark'] .categoryCard:hover .cardTitle {
-  color: #ffffff;
+  color: var(--vwa-ink);
 }
 
 [data-theme='dark'] .categoryCard:hover .cardDescription {
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--vwa-muted);
 }
 
 [data-theme='dark'] .categoryCard:hover .learnMore {
-  color: #ffffff;
+  color: var(--vwa-ink);
 }
 
 [data-theme='dark'] .categoryCard:hover .iconContainer {
-  background: rgba(255, 255, 255, 0.2);
-  color: #ffffff;
+  background: var(--vwa-surface-muted);
+  color: var(--vwa-ink);
 }
 
 [data-theme='dark'] .cardTitle {
-  color: #f3f4f6;
+  color: var(--vwa-ink);
 }
 
 [data-theme='dark'] .cardDescription {
-  color: #9ca3af;
+  color: var(--vwa-muted);
 }
 
 [data-theme='dark'] .learnMore {
-  color: #f3f4f6;
+  color: var(--vwa-ink);
 }
 
 [data-theme='dark'] .iconContainer {
-  background: rgba(255, 255, 255, 0.1);
-  color: #f3f4f6;
+  background: var(--vwa-surface-muted);
+  color: var(--vwa-ink);
 }
 
 /* Responsive design */

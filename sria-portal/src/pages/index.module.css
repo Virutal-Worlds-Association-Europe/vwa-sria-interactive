@@ -22,7 +22,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(130, 128, 126, 0.75) 0%, rgba(186, 185, 183, 0.7) 100%);
+  background: linear-gradient(135deg, rgba(248, 247, 243, 0.78) 0%, rgba(221, 219, 209, 0.62) 100%);
   pointer-events: none;
 }
 
@@ -41,10 +41,11 @@
 
 .heroTitle {
   font-size: 4rem;
-  font-weight: 700;
-  line-height: 1.2;
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
   margin-bottom: 1rem;
-  color: #000000;
+  color: var(--vwa-ink);
 }
 
 @media screen and (max-width: 996px) {
@@ -54,9 +55,10 @@
 }
 
 .heroSubtitle {
-  font-size: 1.5rem;
-  line-height: 1.6;
-  color: #333333;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--vwa-muted);
   margin: 0 auto 2.5rem;
 }
 
@@ -77,12 +79,12 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background-color: #000000;
-  color: #ffffff;
+  background-color: var(--vwa-button-bg);
+  color: var(--vwa-button-fg);
   font-weight: 600;
   font-size: 1.1rem;
   padding: 1rem 2rem;
-  border-radius: 50px;
+  border-radius: var(--vwa-radius-pill);
   text-decoration: none;
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -90,10 +92,10 @@
 
 .exploreButton:hover {
   transform: translateY(-2px);
-  background-color: #1a1a1a;
+  background-color: var(--vwa-button-bg-hover);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(0, 0, 0, 0.18);
   text-decoration: none;
-  color: #ffffff;
+  color: var(--vwa-button-fg);
 }
 
 .buttonIcon {
@@ -108,7 +110,7 @@
 /* Strategic Agenda Section */
 .strategicSection {
   padding: 5rem 0;
-  background-color: #f8f7f3;
+  background-color: var(--vwa-bg);
 }
 
 @media screen and (max-width: 996px) {
@@ -121,8 +123,10 @@
   text-align: center;
   margin-bottom: 3rem;
   font-size: 2rem;
-  font-weight: 700;
-  color: #000000;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--vwa-ink);
 }
 
 @media screen and (max-width: 996px) {
@@ -148,13 +152,14 @@
 
 .strategyCard {
   display: block;
-  background: #ece5c0;
+  background: var(--vwa-card);
   padding: 2.5rem;
-  border-radius: 16px;
+  border: 1px solid var(--vwa-card-border);
+  border-radius: 12px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
   transition: all 0.3s ease;
   text-decoration: none;
-  color: #000000;
+  color: var(--vwa-ink);
   cursor: pointer;
   position: relative;
   overflow: hidden;
@@ -174,10 +179,10 @@
 
 .strategyCard:hover {
   transform: translateY(-4px);
-  background: #ece5c0;
-  box-shadow: 0 6px 20px rgba(236, 229, 192, 0.6), 0 0 0 1px rgba(236, 229, 192, 0.3);
+  background: var(--vwa-card-hover);
+  box-shadow: 0 6px 20px var(--vwa-card-shadow), 0 0 0 1px var(--vwa-border-soft);
   text-decoration: none;
-  color: #000000;
+  color: var(--vwa-ink);
 }
 
 .strategyCard:hover::before {
@@ -191,7 +196,7 @@
   width: 56px;
   height: 56px;
   background-color: transparent;
-  color: #000000;
+  color: var(--vwa-ink);
   border-radius: 12px;
   font-size: 1.75rem;
   margin-bottom: 1.25rem;
@@ -201,11 +206,11 @@
   margin-bottom: 0.75rem;
   font-size: 1.25rem;
   font-weight: 600;
-  color: #000000;
+  color: var(--vwa-ink);
 }
 
 .strategyDescription {
-  color: #333333;
+  color: var(--vwa-muted);
   line-height: 1.6;
   font-size: 0.95rem;
   margin: 0;
@@ -214,7 +219,7 @@
 /* Vision Section */
 .visionSection {
   padding: 5rem 0;
-  background-color: #f8f7f3;
+  background-color: var(--vwa-bg);
 }
 
 @media screen and (max-width: 996px) {
@@ -239,7 +244,8 @@
 
 .visionCard {
   display: block;
-  background: #ece5c0;
+  background: var(--vwa-card);
+  border: 1px solid var(--vwa-card-border);
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
@@ -251,7 +257,7 @@
   justify-content: center;
   width: 56px;
   height: 56px;
-  color: #000000;
+  color: var(--vwa-ink);
   font-size: 1.75rem;
   margin-bottom: 1.25rem;
 }
@@ -260,11 +266,11 @@
   margin-bottom: 0.75rem;
   font-size: 1.25rem;
   font-weight: 600;
-  color: #000000;
+  color: var(--vwa-ink);
 }
 
 .visionDescription {
-  color: #333333;
+  color: var(--vwa-muted);
   line-height: 1.6;
   font-size: 0.95rem;
   margin: 0;
@@ -272,75 +278,75 @@
 
 /* Dark mode adjustments */
 [data-theme='dark'] .heroBanner::before {
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(30, 30, 30, 0.85) 100%);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.88) 0%, rgba(26, 26, 26, 0.82) 100%);
 }
 
 [data-theme='dark'] .heroTitle {
-  color: #ffffff;
+  color: var(--vwa-ink);
 }
 
 [data-theme='dark'] .heroSubtitle {
-  color: #e0e0e0;
+  color: var(--vwa-muted);
 }
 
 [data-theme='dark'] .exploreButton {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: var(--vwa-button-bg);
+  color: var(--vwa-button-fg);
 }
 
 [data-theme='dark'] .exploreButton:hover {
-  background-color: #1a1a1a;
-  color: #ffffff;
+  background-color: var(--vwa-button-bg-hover);
+  color: var(--vwa-button-fg);
 }
 
 [data-theme='dark'] .strategicSection {
-  background-color: #1a1a1a;
+  background-color: var(--vwa-bg);
 }
 
 [data-theme='dark'] .sectionTitle {
-  color: #ffffff;
+  color: var(--vwa-ink);
 }
 
 [data-theme='dark'] .strategyCard {
-  background: #3b351d;
-  border-color: #4f4728;
+  background: var(--vwa-card);
+  border-color: var(--vwa-card-border);
 }
 
 [data-theme='dark'] .strategyCard:hover {
-  border-color: #5b5230;
-  background: #463f24;
-  box-shadow: 0 6px 20px rgba(236, 229, 192, 0.08), 0 0 0 1px rgba(236, 229, 192, 0.06);
+  border-color: var(--vwa-border);
+  background: var(--vwa-card-hover);
+  box-shadow: 0 6px 20px var(--vwa-card-shadow), 0 0 0 1px var(--vwa-border-soft);
 }
 
 [data-theme='dark'] .strategyTitle {
-  color: #ffffff;
+  color: var(--vwa-ink);
 }
 
 [data-theme='dark'] .strategyDescription {
-  color: #b6b6b6;
+  color: var(--vwa-muted);
 }
 
 [data-theme='dark'] .strategyIcon {
-  color: #ffffff;
+  color: var(--vwa-ink);
 }
 
 [data-theme='dark'] .visionSection {
-  background-color: #1a1a1a;
+  background-color: var(--vwa-bg);
 }
 
 [data-theme='dark'] .visionCard {
-  background: #3b351d;
-  border-color: #4f4728;
+  background: var(--vwa-card);
+  border-color: var(--vwa-card-border);
 }
 
 [data-theme='dark'] .visionIcon {
-  color: #ffffff;
+  color: var(--vwa-ink);
 }
 
 [data-theme='dark'] .visionTitle {
-  color: #ffffff;
+  color: var(--vwa-ink);
 }
 
 [data-theme='dark'] .visionDescription {
-  color: #b6b6b6;
+  color: var(--vwa-muted);
 }
