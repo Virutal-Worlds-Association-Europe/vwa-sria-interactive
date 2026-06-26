@@ -1,0 +1,104 @@
+.banner {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  left: 1rem;
+  z-index: 1000;
+  display: flex;
+  max-width: 920px;
+  margin: 0 auto;
+  gap: 1.25rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border: 1px solid var(--vwa-border);
+  border-radius: 8px;
+  background: var(--ifm-background-surface-color);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+}
+
+.copy {
+  min-width: 0;
+}
+
+.title {
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+.copy p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.status {
+  margin-top: 0.35rem !important;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.privacyLink {
+  display: inline-block;
+  margin-top: 0.45rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.actions {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 0.75rem;
+}
+
+.button {
+  min-width: 9.5rem;
+  min-height: 2.5rem;
+  padding: 0.55rem 0.9rem;
+  border: 1px solid var(--vwa-ink);
+  border-radius: var(--vwa-radius-pill);
+  background: transparent;
+  color: var(--vwa-ink);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+.button:hover,
+.button:focus-visible {
+  background: var(--vwa-ink);
+  color: var(--vwa-bg);
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--vwa-ink);
+  outline-offset: 2px;
+}
+
+[data-theme='dark'] .banner {
+  border-color: var(--vwa-border);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+}
+
+[data-theme='dark'] .status {
+  color: var(--ifm-color-emphasis-600);
+}
+
+@media (max-width: 720px) {
+  .banner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.875rem;
+    padding: 0.875rem;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+
+  .button {
+    width: 100%;
+    min-height: 2.75rem;
+  }
+}
