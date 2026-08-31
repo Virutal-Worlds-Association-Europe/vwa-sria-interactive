@@ -1,5 +1,32 @@
 import React, { useEffect, useState, useRef } from 'react';
+import {trackSriaFeedbackSubmit} from '@site/src/utils/analyticsConsent';
 import styles from './FeedbackForm.module.css';
+
+const TALLY_ORIGIN = 'https://tally.so';
+const TALLY_FORM_ID = 'eqK0r0';
+
+type TallyFormSubmittedMessage = {
+  event: 'Tally.FormSubmitted';
+  payload: {
+    formId: string;
+  };
+};
+
+function isTallyFormSubmittedMessage(
+  value: unknown,
+): value is TallyFormSubmittedMessage {
+  if (!value || typeof value !== 'object') {
+    return false;
+  }
+
+  const message = value as Partial<TallyFormSubmittedMessage>;
+  return (
+    message.event === 'Tally.FormSubmitted' &&
+    typeof message.payload === 'object' &&
+    message.payload !== null &&
+    message.payload.formId === TALLY_FORM_ID
+  );
+}
 
 interface FeedbackFormProps {
   section?: string;
@@ -45,9 +72,33 @@ export default function FeedbackForm({
     }
   }, []);
 
+  useEffect(() => {
+    const handleTallyMessage = (messageEvent: MessageEvent<unknown>) => {
+      if (messageEvent.origin !== TALLY_ORIGIN) {
+        return;
+      }
+
+      let messageData = messageEvent.data;
+      if (typeof messageData === 'string') {
+        try {
+          messageData = JSON.parse(messageData) as unknown;
+        } catch {
+          return;
+        }
+      }
+
+      if (isTallyFormSubmittedMessage(messageData)) {
+        trackSriaFeedbackSubmit();
+      }
+    };
+
+    window.addEventListener('message', handleTallyMessage);
+    return () => window.removeEventListener('message', handleTallyMessage);
+  }, []);
+
   // Build Tally URL with hidden field parameters
   const buildTallyUrl = () => {
-    const baseUrl = 'https://tally.so/embed/eqK0r0';
+    const baseUrl = `${TALLY_ORIGIN}/embed/${TALLY_FORM_ID}`;
     const params = new URLSearchParams({
       alignLeft: '1',
       hideTitle: '1',

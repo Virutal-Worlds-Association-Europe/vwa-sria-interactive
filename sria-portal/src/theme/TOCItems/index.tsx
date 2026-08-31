@@ -2,6 +2,7 @@ import React from 'react';
 import TOCItems from '@theme-original/TOCItems';
 import type TOCItemsType from '@theme/TOCItems';
 import type { WrapperProps } from '@docusaurus/types';
+import {trackSriaFeedbackStart} from '@site/src/utils/analyticsConsent';
 
 type Props = WrapperProps<typeof TOCItemsType>;
 
@@ -16,6 +17,7 @@ export default function TOCItemsWrapper(props: Props): React.ReactElement {
       <li className="table-of-contents__link-wrapper" style={{ marginTop: '8px' }}>
         <a
           href="#feedback"
+          onClick={trackSriaFeedbackStart}
           className="table-of-contents__link"
           style={{
             display: 'flex',

@@ -23,6 +23,14 @@ type AnalyticsWindow = Window & {
   gtag?: (...args: unknown[]) => void;
 } & Record<string, unknown>;
 
+type AnalyticsEventParameter = string | number | boolean;
+type AnalyticsEventParameters = Record<string, AnalyticsEventParameter>;
+
+export type SriaSectionContext = {
+  sria_section_group: string;
+  sria_section: string;
+};
+
 let gtagConfigured = false;
 let inMemoryConsent: AnalyticsConsentChoice | null = null;
 
@@ -219,7 +227,7 @@ export function getCurrentPagePath(): string {
     return '/';
   }
 
-  return `${window.location.pathname}${window.location.search}${window.location.hash}`;
+  return `${window.location.pathname}${window.location.search}`;
 }
 
 export function trackAnalyticsPageView(pagePath = getCurrentPagePath()): void {
@@ -230,7 +238,75 @@ export function trackAnalyticsPageView(pagePath = getCurrentPagePath()): void {
   const analyticsWindow = getAnalyticsWindow();
   analyticsWindow.gtag?.('event', 'page_view', {
     page_path: pagePath,
-    page_location: window.location.href,
+    page_location: new URL(pagePath, window.location.origin).href,
     page_title: document.title,
   });
+}
+
+export function trackAnalyticsEvent(
+  eventName: string,
+  parameters: AnalyticsEventParameters = {},
+): void {
+  if (!loadGoogleAnalytics()) {
+    return;
+  }
+
+  getAnalyticsWindow().gtag?.('event', eventName, parameters);
+}
+
+function getRoutePath(pagePath: string): string {
+  const pathWithoutQueryOrHash = pagePath.split(/[?#]/, 1)[0] || '/';
+  const normalizedPath = pathWithoutQueryOrHash.startsWith('/')
+    ? pathWithoutQueryOrHash
+    : `/${pathWithoutQueryOrHash}`;
+
+  return normalizedPath.length > 1
+    ? normalizedPath.replace(/\/+$/, '')
+    : normalizedPath;
+}
+
+export function getSriaSectionContext(
+  pagePath = getCurrentPagePath(),
+): SriaSectionContext {
+  const routeSegments = getRoutePath(pagePath)
+    .split('/')
+    .filter(Boolean);
+
+  if (routeSegments.length === 0) {
+    return {
+      sria_section_group: 'overview',
+      sria_section: 'overview',
+    };
+  }
+
+  if (routeSegments[0] !== 'docs') {
+    return {
+      sria_section_group: 'other',
+      sria_section: routeSegments.at(-1) ?? 'other',
+    };
+  }
+
+  const sectionGroup = routeSegments[1] ?? 'overview';
+  return {
+    sria_section_group: sectionGroup,
+    sria_section: routeSegments[2] ?? sectionGroup,
+  };
+}
+
+export function trackSriaRouteView(
+  pagePath = getCurrentPagePath(),
+): void {
+  trackAnalyticsPageView(pagePath);
+  trackAnalyticsEvent('sria_section_view', {
+    ...getSriaSectionContext(pagePath),
+    page_path: pagePath,
+  });
+}
+
+export function trackSriaFeedbackStart(): void {
+  trackAnalyticsEvent('sria_feedback_start', getSriaSectionContext());
+}
+
+export function trackSriaFeedbackSubmit(): void {
+  trackAnalyticsEvent('sria_feedback_submit', getSriaSectionContext());
 }
