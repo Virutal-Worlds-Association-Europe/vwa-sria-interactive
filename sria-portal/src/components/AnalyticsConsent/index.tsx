@@ -7,7 +7,7 @@ import {
   getCurrentPagePath,
   PRIVACY_POLICY_URL,
   setAnalyticsConsent,
-  trackAnalyticsPageView,
+  trackSriaRouteView,
 } from '@site/src/utils/analyticsConsent';
 import styles from './styles.module.css';
 
@@ -72,7 +72,7 @@ export default function AnalyticsConsent(): React.ReactElement | null {
     setAnalyticsConsent('accepted');
     setChoice('accepted');
     setOpen(false);
-    window.setTimeout(() => trackAnalyticsPageView(getCurrentPagePath()), 0);
+    window.setTimeout(() => trackSriaRouteView(getCurrentPagePath()), 0);
   };
 
   const handleDecline = () => {

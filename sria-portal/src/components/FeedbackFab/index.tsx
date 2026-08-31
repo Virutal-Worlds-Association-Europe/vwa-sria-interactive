@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import {trackSriaFeedbackStart} from '@site/src/utils/analyticsConsent';
 import styles from './styles.module.css';
 
 /**
@@ -28,6 +29,7 @@ export default function FeedbackFab(): React.ReactElement {
   const handleClick = () => {
     const feedbackEl = document.getElementById('feedback');
     if (feedbackEl) {
+      trackSriaFeedbackStart();
       feedbackEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
